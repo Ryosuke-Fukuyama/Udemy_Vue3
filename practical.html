@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="once">
+    <!-- 初回のみテキストバインディングを行う。(ページ更新のパフォーマンス向上) -->
+    <p v-once>{{ message }}</p>
+    <button v-on:click="clickHandler">
+      Click!
+    </button>
+  </div>
+
+  <div id="pre">
+    <!-- 要素とすべての子要素のコンパイルをスキップ。 -->
+    <p v-pre>{{ message }}</p>
+  </div>
+
+  <div id="html">
+    <p>{{ message }}</p>
+    <!-- プレーンなHtmlを使用。 ※使用には注意が必要。-->
+    <p v-html="message"></p>
+  </div>
+
+  <div id="cloak">
+    <!-- ページ読み込み時、コンパイル前のテンプレートをCssを利用して非表示にする。 -->
+    <p v-cloak>{{ message }}</p>
+  </div>
+
+  <div id="text">
+    <!-- マスタッシュを使わずに表示させる。※冗長性は下がる。 -->
+    <p v-text="message"></p>
+  </div>
+
+  <div id="app">
+    <!-- 各データバインディング式はJavaScript式(単一式のみ)を利用できる。 -->
+    <p>{{ message.split('').reverse().join('') }}</p>
+    <p>{{ number }}</p>
+    <p>{{ number + 1 }}</p>
+    <p>{{ ok ? 'YES' : 'NO' }}</p>
+  </div>
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/v_once.js"></script>
+  <script src="js/v_pre.js"></script>
+  <script src="js/v_html.js"></script>
+  <script src="js/v_cloak.js"></script>
+  <script src="js/v_text.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

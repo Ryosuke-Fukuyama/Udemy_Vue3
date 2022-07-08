@@ -14,7 +14,9 @@ const app = Vue.createApp({
       firstName: 'Yuta',
       prefecture: 'Tokyo'
     },
-    colors: ['Red', 'Green', 'Blue']
+    colors: ['Red', 'Green', 'Blue'],
+    number: 100,
+    ok: false
   })
 }).mount('#app')
 
