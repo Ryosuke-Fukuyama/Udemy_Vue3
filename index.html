@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <p>{{ message }}</p>
+    <p>{{ message }}</p>
+    <p>{{ count }}</p>
+    <p>{{ user.prefecture }}</p>
+    <p>{{ colors[1] }}</p>
+  </div>
+
+  <div id="bind">
+    <input type="text" v-bind:value="message">
+  </div>
+
+  <div id="if">
+    <p v-if="toggle">{{ message }}</p>
+  </div>
+
+  <div id="for">
+    <ol>
+      <li v-for="color in colors">
+        {{ color }}
+      </li>
+    </ol>
+    <ul>
+      <li v-for="(value, key) in user">
+        {{ key }}: {{ value }}
+      </li>
+    </ul>
+  </div>
+
+  <div id="on">
+    <button v-on:click="onClick">Click!</button>
+    <p>{{ now }}</p>
+  </div>
+
+  <div id="model">
+    <p><input type="text" v-model="message"></p>
+    <p><input type="text" v-model="message"></p>
+  </div>
+
+  <div id="component">
+    <hello-component></hello-component>
+    <hello-component></hello-component>
+    <hello-component></hello-component>
+  </div>
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/main.js"></script>
+  <script src="js/v_bind.js"></script>
+  <script src="js/v_if.js"></script>
+  <script src="js/v_for.js"></script>
+  <script src="js/v_on.js"></script>
+  <script src="js/v_model.js"></script>
+  <script src="js/component.js"></script>
+</body>
+</html>
