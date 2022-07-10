@@ -23,6 +23,27 @@
 
   <div id="if">
     <p v-if="toggle">{{ message }}</p>
+
+    <p v-if="toggle">Yes!</p>
+    <!-- v-if直後にないと読み込まれない -->
+    <p v-else>No</p>
+
+    <p v-if="color === 'red'">
+      Stop
+    </p>
+    <p v-else-if="color === 'yellow'">
+      Caution
+    </p>
+    <p v-else-if="color === 'blue'">
+      Go
+    </p>
+    <p v-else>
+      Not red/yellow/blue
+    </p>
+  </div>
+
+  <div id="show">
+    <p v-show="toggle">Hello Vue.js!</p>
   </div>
 
   <div id="for">
@@ -57,6 +78,7 @@
   <script src="js/main.js"></script>
   <script src="js/basic/v_bind.js"></script>
   <script src="js/basic/v_if.js"></script>
+  <script src="js/basic/v_show.js"></script>
   <script src="js/basic/v_for.js"></script>
   <script src="js/basic/v_on.js"></script>
   <script src="js/basic/v_model.js"></script>

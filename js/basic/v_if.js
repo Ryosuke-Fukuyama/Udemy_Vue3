@@ -3,6 +3,8 @@
 const vmIf = Vue.createApp({
   data: () => ({
     message: 'Hello',
-    toggle: true
+    toggle: true,
+
+    color: 'red'
   })
 }).mount('#if')
