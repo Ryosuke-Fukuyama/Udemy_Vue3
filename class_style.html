@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="class_dbind">
+    <p><span class="text-black">Hello </span><span class="bg-gray" :class="{ large: isLarge, 'text-danger': hasError }">Vue.js!</span></p>
+    <p><span class="text-black">Hello </span><span class="bg-gray" :class="[largeClass, dangerClass]">Vue.js!</span></p>
+    <p><span class="text-black">Hello </span><span class="bg-gray" :class="classObject">Vue.js!</span></p>
+  </div>
+
+  <div id="class_if">
+    <p><span class="text-black">Hello </span><span class="bg-gray" :class="isLarge ? [largeClass, dangerClass]: ''">Vue.js!</span></p>
+  </div>
+
+  <div id="style_dbind">
+    <p>Hello <span :style="{ color: color, fontSize: fontSize }">Vue.js!</span></p>
+    <p>Hello <span :style="styleObject">Vue.js!</span></p>
+  </div>
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/class_style/class_dbind.js"></script>
+  <script src="js/class_style/class_if.js"></script>
+  <script src="js/class_style/style_dbind.js"></script>
+</body>
+</html>

@@ -5,3 +5,16 @@ p {
 [v-cloak] {
   display: none;
 }
+
+.large {
+  font-size: 36px;
+}
+.text-danger {
+  color: red;
+}
+.bg-gray {
+  background-color: gray;
+}
+.text-black {
+  color: black;
+}
