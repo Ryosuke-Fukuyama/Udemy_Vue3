@@ -10,7 +10,8 @@
   <div id="once">
     <!-- 初回のみテキストバインディングを行う。(ページ更新のパフォーマンス向上) -->
     <p v-once>{{ message }}</p>
-    <button v-on:click="clickHandler">
+    <!-- <button v-on:click="clickHandler"> -->
+      <button @click="clickHandler"></button>
       Click!
     </button>
   </div>
