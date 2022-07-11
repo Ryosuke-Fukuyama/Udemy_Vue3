@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div id="once">
@@ -44,6 +45,13 @@
     <p>{{ number + 1 }}</p>
     <p>{{ ok ? 'YES' : 'NO' }}</p>
   </div>
+
+  <div id="transition">
+    <button v-on:click="show = !show">Change</button>
+    <transition name="fade">
+      <p v-show="show">Hello Transition</p>
+    </transition>
+  </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="js/practical/v_once.js"></script>
   <script src="js/practical/v_pre.js"></script>
@@ -51,5 +59,6 @@
   <script src="js/practical/v_cloak.js"></script>
   <script src="js/practical/v_text.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/practical/transition.js"></script>
 </body>
 </html>
